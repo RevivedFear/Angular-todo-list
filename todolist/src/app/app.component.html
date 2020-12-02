@@ -1,0 +1,18 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Todo List</h5>
+    <h6 class="card-subtitle mb-2 text-muted">A simple Todo list made to practice angular</h6>
+    <input type='text'
+    [(ngModel)]='futureTodo' />
+    <button class='btn btn-success'
+    (click)='addTodo()'>
+</button>
+<form>
+  <div class="form-group" *ngFor='let todo of todos'>
+    <div *ngIf='todo.show'>
+    <button class="btn" (click)='deleteTodo(todo.id)'><i class="fa fa-close"></i></button>
+    {{todo.name}}
+    </div>
+  </div>  
+  </form>
+  </div>
